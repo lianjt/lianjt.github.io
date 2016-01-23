@@ -29,11 +29,11 @@
 	outline: none;
 }
 
-
-
 #cmn-video-demo-content h2,
 #cmn-video-demo-content p
  {
+ 	top:50%;
+ 	left:50%;
 	color: #fff;
 	text-shadow: -1px 1px 4px rgba(0,0,0,0.6);
 }
@@ -87,3 +87,22 @@
 	transform: translate(-50%,-50%);
 }
 
+#loading {
+	height: 100%;
+	width: 100%;
+	top:0px;
+	left:0px;
+	position: fixed;
+	display: block;
+	opacity: 0.7;
+	background-color: #fff;
+	z-index:99;
+	text-align: center;
+}
+
+#loading-image {
+	position: absolute;
+	top: 45%;
+	left: 45%;
+	z-index: 100;
+}
