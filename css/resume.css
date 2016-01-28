@@ -5,6 +5,21 @@
 }
 
 /* SECTIONS */
+.ToTop {
+	width: 50px;
+	height: 50px;
+	top:50%;
+	left: 95%;
+	position: fixed;
+	z-index: 99;
+	content: url("../image/back-to-top-back.png");
+	transform: translate(0,-50%);
+}
+
+.ToTop:hover {
+	content: url("../image/back-to-top.png");
+}
+
 section.module:last-child {
 	margin-bottom: 0;
 }

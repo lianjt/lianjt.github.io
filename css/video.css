@@ -1,3 +1,39 @@
+a {
+	z-index: 999999;
+}
+#banner {
+	width:100%;
+	background-color:white;
+	height:50px;
+	z-index:5;
+	top:58%;
+	left:-50%;
+	position:absolute;
+	transform:translate(-50%,-50%);
+	display:true;
+}
+
+#banner h2 {
+	font-family: "Roboto Slab", serif;
+	top:50%;
+ 	left:50%;
+ 	color: black;
+ 	text-shadow: -1px 1px 4px rgba(255,255,255,0.6);
+ 	position: absolute;
+ 	absolute;transform:translate(-50%,-50%);
+ 	font-weight: 700;
+ 	font-size: 24px;
+}
+
+#mubu {
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+	z-index: 999;
+	position: absolute;
+}
+
 #cmn-video-demo-content {
 	position: absolute;
 	top:0;
@@ -8,13 +44,37 @@
 	padding: 80px 20px;
 	text-align: center;
 }
+#cmn-video-demo-content .cmn-video-demo-content-header h2,
+#cmn-video-demo-content .cmn-video-demo-content-header p
+ {
+ 	font-family: "Roboto Slab", serif;
+ 	top:50%;
+ 	left:50%;
+	color: white;
+	text-shadow: -1px 1px 4px rgba(0,0,0,0.6);
+}
+
+#cmn-video-demo-content h2 {
+	font-size: 30px;
+}
+
+#cmn-video-demo-content p {
+	margin-bottom: 40px;
+}
 
 .cmn-video-demo-main p {
-	color: #fff;
+	color:gray;
+	font-family: "Roboto Slab", serif;
+	text-shadow: -1px 1px 4px rgba(0,0,0,0.6);
+}
+.cmn-video-demo-main p:hover {
+	color:white;
+	font-family: "Roboto Slab", serif;
 	text-shadow: -1px 1px 4px rgba(0,0,0,0.6);
 }
 
 .cmn-video-demo-main a {
+
 	text-decoration:none;
 	z-index: 2;
 	display: inline-block;
@@ -29,22 +89,34 @@
 	outline: none;
 }
 
-#cmn-video-demo-content h2,
-#cmn-video-demo-content p
- {
- 	top:50%;
- 	left:50%;
-	color: #fff;
-	text-shadow: -1px 1px 4px rgba(0,0,0,0.6);
+#cmn-video-demo-video {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: -1; 
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	transform: translate(-50%,-50%);
 }
 
-#cmn-video-demo-content h2 {
-	font-family: "Roboto Slab", serif;
-	font-size: 30px;
+#loading {
+	height: 100%;
+	width: 100%;
+	top:0px;
+	left:0px;
+	position: fixed;
+	background-color: black;
+	z-index:99;
 }
 
-#cmn-video-demo-content p {
-	margin-bottom: 40px;
+#loading-image {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 100;
+	transform: translate(-50%,-50%);
 }
 
 @media all and (min-width: 600px) {
@@ -73,35 +145,4 @@
 	#cmn-video-demo-content p {
 		font-size: 24px;
 	}
-}
-
-#cmn-video-demo-video {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	z-index: -1; 
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	transform: translate(-50%,-50%);
-}
-
-#loading {
-	height: 100%;
-	width: 100%;
-	top:0px;
-	left:0px;
-	position: fixed;
-	display: block;
-	background-color: #fff;
-	z-index:99;
-	text-align: center;
-}
-
-#loading-image {
-	position: absolute;
-	top: 45%;
-	left: 45%;
-	z-index: 100;
 }

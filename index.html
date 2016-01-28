@@ -1,42 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Jingtao Lian - Main Page</title>
+	<title>Main Page</title>
 	<meta content="width=device-width,initial-scale=1.0" name="viewport">
 	<link rel="stylesheet" href="css/video.css">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
 	<link rel="stylesheet" href="css/base.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<script type="text/javascript" >
+	<!--<script type="text/javascript" src="jquery-1.12.0.min.js"></script>-->
+	<script>
 		$(window).load(function() {
+			$("#mubu").hide();
 			$("#loading").fadeOut("slow");
+		});
+
+		$(".container").click(function() {
+			alert("123");
+		});
+	
+		$(document).ready(function() {
+			$("#resume").click(function(e) {
+				e.preventDefault();
+
+				$("#banner h2").html("Resume");
+
+				$("#banner").animate({
+					"left":"50%"
+				}, 1500, function() {
+					$("body").fadeOut(2500, function() {
+						window.location.href="resume.html";
+					});
+				});
+			});
+
+			$("#reference").click(function(e) {
+				e.preventDefault();
+
+				$("#banner h2").html("Reference");
+
+				$("#banner").animate({
+					"left":"50%"
+				}, 1500, function() {
+					$("body").fadeOut(2500, function() {
+						window.location.href="reference.html";
+					});
+				});
+			});
 		})
+	
 	</script>
 </head>
 <body>
-<main>
+
 <div class="container">
 	<div id="loading">
 		<img id="loading-image" src="image/bat.gif" alt="loading">
 	</div> 
 
+	<div id="mubu">
+	</div>
+
+	<div id="banner">
+	<h2></h2>
+	</div>
+
 	<div id="cmn-video-demo-content">
 		<div class="cmn-video-demo-content-header">
 			<h2>Personal Webpage</h2>
-			<p>Jingtao Lian&nbsp&nbsp&nbsp Email:jingtao.lian@gmail.com</p>
+			<p>Email:jingtao.lian@gmail.com</p>
 		</div>
 
 		<div class="cmn-video-demo-main">
-		<a href="resume.html"><p>Resume</p></a>
-		<a href="reference.html"><p>Reference</p></a>
-	</div>
+			<a id="resume" href="resume.html"><p>Resume</p></a>
+			<a id="reference" href="reference.html"><p>Reference</p></a>
+		</div>
 	</div>
 </div>
-</main>
+
 
 <video id="cmn-video-demo-video" autoplay muted loop>
 	<source src="media/back.mp4" type="video/mp4">
 	Your browser doesn't support HTML5 video.
 </video>
+
 </body>
 </html>
